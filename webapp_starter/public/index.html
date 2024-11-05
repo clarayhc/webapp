@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello, Web!</title>
-  </head>
-  <body>
-    <h1>Hello, Web!</h1>
-    <p>This is a static web page.</p>
+    <title>Art Inspiration Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Art Inspiration Generator</h1>
+        <p>Find your next art style and theme inspiration!</p>
+    </header>
 
-    <a href="http://localhost:8000/api/test?myParam=abc"
-      >This is a link to an api route.</a
-    >
-    <br />
-    <a href="http://localhost:8000/test.html"
-      >This is a link to another static page.</a
-    >
-  </body>
+    <main>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name" class="input-label">Enter a Theme:</label>
+                <input type="text" id="name" class="theme-input" placeholder="e.g., surrealism, nature" />
+                <span id="nameError" class="error"></span>
+            </div>
+
+            <div class="style-section">
+                <h2 class="style-title">Choose Art Styles:</h2>
+                <div id="style-container" class="style-container"></div>
+            </div>
+
+            <button type="submit" class="submit-button">Generate Inspiration</button>
+        </form>
+
+        <div id="inspiration-container" class="inspiration-container"></div>
+    </main>
+
+    <footer>
+        <p>Powered by Creativity and Imagination</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
