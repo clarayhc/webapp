@@ -2,7 +2,7 @@ let artStyles = []
 const styleContainer = document.getElementById('style-container')
 const form = document.getElementById('userForm')
 
-// Store form data
+
 let formData = {
     theme: '',
     styles: []
